@@ -14,10 +14,12 @@ namespace CoffeeShopApp.Controllers
             return View();
         }
 
-        public ActionResult Register(string firstName, string lastName, string email, int phoneNumber, string password)
+        public ActionResult Register(string firstName, string lastName, int age, int birth, string email, int phoneNumber, string password)
         {
             ViewBag.FirstName = firstName;
             ViewBag.LastName = lastName;
+            ViewBag.Age = age;
+            ViewBag.Birth = birth;
             ViewBag.Email = email;
             ViewBag.PhoneNumber = phoneNumber;
             ViewBag.Password = password;

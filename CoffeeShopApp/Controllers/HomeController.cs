@@ -20,9 +20,9 @@ namespace CoffeeShopApp.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Items()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Welcome to the PokeMart.";
 
             return View();
         }
