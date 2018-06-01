@@ -1,48 +1,52 @@
-﻿
-    @{
-        ViewBag.Title = "User Registration";
+﻿@model IEnumerable<CoffeeShopApp.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BirthDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Email }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Email }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Email })
+            </td>
+        </tr>
     }
-        <h2>User Registration</h2>
-        <hr />
-        <form class="form-horizontal" action="/Home/Registration" method="get">
-            <div class="form-group">
-                <label for="First Name" class="col-sm-6 control-label">First Name:</label>
-                <div class="col-sm-6">
-                    <input type="text" name="First Name" class="form-control" />
-                </div>
-                <label for="Last Name" class="col-sm-6 control-label" >Last Name:</label>
-                <div class="col-sm-6">
-                </div>
-                <label for="Age" class="col-sm-6 control-label" >Age:</label>
-                <div class="col-sm-6">
-                    <input type="number" name="Age" class="form-control" /><br />
-                </div>
-            </div>
-            <label for="Birth" class="col-sm-6 control-label" >Birth:</label>
-            <div class="col-sm-6">
-                <input type="number" name="Birth" class="form-control" /><br />
-            </div>
-                    <input type="text" name="Last Name" class="form-control" /><br />
-                
-                <label for="Email" class="col-sm-6 control-label">Email:</label>
-                <div class="col-sm-6">
-                    <input type="text" name="Email" class="form-control" />
-                </div>
-                <label for="Phone Number" class="col-sm-6 control-label" >Phone Number:</label>
-                <div class="col-sm-6">
-                    <input type="number" name="Phone Number" class="form-control" /><br />
-                </div>
-                <label for="Password" class="col-sm-6 control-label">Password:</label>
-                <div class="col-sm-6">
-                    <input type="text" name="Password" class="form-control" />
-                </div>
-            
-            <div class="form-group">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4" style="text-align:center">
-                    <input type="submit" class="btn btn-primary" name="Register!" />
-                    <input type="reset" class="btn btn-warning" name="Reset Form" />
-                </div>
-                <div class="col-sm-4"></div>
-            </div>
-        </form>
+
+</table>

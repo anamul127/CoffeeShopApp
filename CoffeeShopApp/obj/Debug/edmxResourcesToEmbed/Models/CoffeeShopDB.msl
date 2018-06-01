@@ -26,8 +26,12 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="CoffeeShopDBModel.User">
         <MappingFragment StoreEntitySet="Users">
-          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="BirthDay" ColumnName="BirthDay" />
           <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

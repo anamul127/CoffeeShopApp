@@ -45,7 +45,7 @@ namespace CoffeeShopApp.Models
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserName,Password")] User user)
+        public ActionResult Create([Bind(Include = "Email,Password,BirthDay,Age,PhoneNumber")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -77,7 +77,7 @@ namespace CoffeeShopApp.Models
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UserName,Password")] User user)
+        public ActionResult Edit([Bind(Include = "Email,Password,BirthDay,Age,PhoneNumber")] User user)
         {
             if (ModelState.IsValid)
             {

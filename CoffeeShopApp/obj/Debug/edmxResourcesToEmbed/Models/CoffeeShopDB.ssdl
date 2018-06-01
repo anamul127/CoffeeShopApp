@@ -22,10 +22,14 @@
   </EntityType>
   <EntityType Name="Users">
     <Key>
-      <PropertyRef Name="UserName" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BirthDay" Type="int" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="PhoneNumber" Type="int" Nullable="false" />
   </EntityType>
   <EntityContainer Name="CoffeeShopDBModelStoreContainer">
     <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
